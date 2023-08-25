@@ -10,7 +10,7 @@ class XbrlExtractionWorker
     extract_from_path = message_body.fetch(:extract_from_path)
     extract_to_path   = message_body.fetch(:extract_to_path)
 
-    system("python3 /opt/arelle/arelleCmdLine.py -f #{extract_from_path} \
+    system("python3 /usr/src/app/arelleCmdLine.py -f #{extract_from_path} \
       --facts #{extract_to_path} \
       --factListCols \"Label Name contextRef unitRef Dec Prec Lang Value EntityScheme EntityIdentifier Period Dimensions\"")
   end
