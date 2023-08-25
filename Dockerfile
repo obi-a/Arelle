@@ -3,12 +3,11 @@ FROM python:3.11.4
 RUN mkdir /var/s3fs
 WORKDIR /usr/src/app
 
-RUN apt update -y \
-    apt install -y ruby ruby-dev;
+RUN apt update -y
 
 RUN apt-get install unixodbc-dev -y
 
-RUN apt-get install -y s3fs
+RUN apt-get install -y s3fs ruby-full
 
 ADD requirements.txt ./
 RUN pip install --no-cache-dir -r requirements.txt
