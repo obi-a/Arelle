@@ -13,6 +13,8 @@ ADD requirements.txt ./
 RUN pip install --no-cache-dir -r requirements.txt
 ADD arelleCmdLine.py /usr/src/app
 ADD arelle /usr/src/app/arelle
+ADD start_arelle.sh /usr/src/app
+ADD xbrl_extraction_worker.rb /usr/src/app
 
 RUN gem install bundler
 RUN gem install shoryuken

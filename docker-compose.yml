@@ -7,7 +7,7 @@ services:
     devices:
       - "/dev/fuse"
     volumes:
-      - .:/opt/arelle
+      #- .:/usr/src/app/
       - ${HOST_PATH}:/index/data
     environment:
       HOST_PATH:
